@@ -1,0 +1,43 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="{% static 'expense/style.css' %}">
+    <link rel="icon" href="#" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <h1>SIGN UP</h1>  
+        <form clsss="form" action="{% url 'main' %}" method="POST" >
+            {% csrf_token %}
+            <p id="log"></p>
+            <input type="text" name="firstname" id="table" placeholder="firstname">
+            <p id="login"></p>
+            <input type="text" name="surname" id="yes" placeholder="surname">
+            
+            <p id="pass"></p>
+            <input type="password" name="password" id="password" placeholder="password">
+            <p class="key">SHOW</p>
+            
+            <input type="submit" value="sign up">
+        </form>
+        {% if messages %}
+       <div class="messages">
+        {% for message in messages %}
+        <div{% if message.tags %} class="alert alert-sm alert-{{ message.tags }}"{% endif %}>
+            {{ message }}
+        </div>
+        {% endfor %}
+       </div>
+      {% endif %}
+
+
+    </main>
+    
+    <script src="{% static '/expense/main.js' %}"></script>
+	
+  </body>
+</html>

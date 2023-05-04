@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    color: blue;
+    text-align: center;
+}
+body{
+    background-color: black;
+    
+}
+main{
+    background-color: black;
+}
+
+form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: center;
+    width: 350px;
+    margin-left: 500px;
+
+}
+
+form input{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 7px;
+    width: 200px;
+}
+
+p{
+    color: white
+}
+#log{
+    color: green;
+}
+.key{
+    color: black;
+    font-size: 10px;
+    margin-right: -150px;
+    cursor: pointer;
+}
